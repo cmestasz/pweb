@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Busqueda avanzada</title>
+        <link rel="stylesheet" href="./estilo.css" />
+    </head>
+    <body>
+        <div style="padding-block: 5px"></div>
+        <div class="links">
+            <a href="./simple.html">Simple</a>
+            <a href="./imagenes.html">Imagenes</a>
+        </div>
+        <div class="minititle">Google</div>
+        <div style="padding-block: 5px"></div>
+        <div class="content">
+            <h1>Busqueda avanzada</h1>
+            <hr />
+            <h2>Mostrar paginas que contengan...</h2>
+            <form action="./cgi-bin/advanced.pl" accept-charset="ISO-8859-1" method="get">
+                <h3>todas estas palabras:</h3>
+                <input type="text" name="all" class="advanced" />
+                <br />
+                <h3>esta palabra o frase exacta:</h3>
+                <input type="text" name="exact" class="advanced" />
+                <br />
+                <h3>ninguna de estas palabras:</h3>
+                <input type="text" name="none" class="advanced" />
+                <br />
+                <div style="padding-block: 25px"></div>
+                <input type="submit" value="Busqueda avanzada" class="advanced" />
+            </form>
+        </div>
+    </body>
+</html>

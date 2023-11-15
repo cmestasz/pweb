@@ -1,0 +1,89 @@
+body {
+    background-color: #202124;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.minititle {
+    display: inline;
+    font-size: 20px;
+    color: white;
+    padding-left: 25px;
+}
+
+.content {
+    padding-left: 50px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #ff563f;
+}
+
+h2 {
+    display: inline-block;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #dfdfdf;
+}
+
+h3 {
+    display: inline-block;
+    padding-block: 10px;
+    width: 200px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #f6f6f6;
+}
+
+hr {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    color: #434343;
+    border: 1px solid;
+}
+
+ul {
+    padding-left: 0px;
+    font-size: 9px;
+    color: white;
+}
+
+input[type="text"] {
+    background-color: #3b3b3b;
+    color: white;
+    border-style: solid;
+    border-color: #858585;
+    border-width: 1px;
+    width: 78%;
+    padding-inline: 15px;
+    padding-block: 10px;
+}
+
+input[type="text"]:focus {
+    border-style: solid;
+    border-color: #2678e3;
+    border-width: 2px;
+    outline: none;
+}
+
+input[type="submit"] {
+    display: block;
+    background-color: #4888ef;
+    color: white;
+    margin: auto;
+    padding-inline: 15px;
+    padding-block: 8px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #4888ef;
+    border-width: 2px;
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    border-color: #8ca9ff;
+    background: linear-gradient(to top, #377be8, #4d90fe);
+}

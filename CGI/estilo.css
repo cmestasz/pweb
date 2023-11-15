@@ -1,0 +1,159 @@
+body {
+    background-color: #202124;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    padding-inline: 10px;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 100px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.subtitle {
+    position: relative;
+    top: -20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #4487d4;
+    padding-left: 250px;
+}
+
+.minititle {
+    display: inline;
+    position: relative;
+    top: -20px;
+    font-size: 20px;
+    color: white;
+    padding-left: 25px;
+}
+
+.content {
+    padding-left: 50px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #ff563f;
+}
+
+h2 {
+    display: inline-block;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #dfdfdf;
+}
+
+h3 {
+    display: inline-block;
+    padding-block: 10px;
+    width: 200px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #f6f6f6;
+}
+
+hr {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    color: #434343;
+    border: 1px solid;
+}
+
+input[type="text"][class="simple"] {
+    display: block;
+    background-color: #202124;
+    color: white;
+    margin: auto;
+    width: 75%;
+    padding-inline: 25px;
+    padding-block: 15px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: #5f6368;
+    border-width: 1px;
+    text-align: left;
+}
+
+input[type="text"][class="simple"]:hover {
+    background-color: #303134;
+}
+
+input[type="text"][class="simple"]:focus {
+    outline: none;
+}
+
+input[type="submit"][class="simple"] {
+    display: block;
+    background-color: #303134;
+    color: white;
+    margin: auto;
+    padding-inline: 15px;
+    padding-block: 8px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #303134;
+    border-width: 1px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type="submit"][class="simple"]:hover {
+    border-color: #5f6368;
+}
+
+input[type="text"][class="advanced"] {
+    background-color: #3b3b3b;
+    color: white;
+    border-style: solid;
+    border-color: #858585;
+    border-width: 1px;
+    width: 78%;
+    padding-inline: 15px;
+    padding-block: 10px;
+}
+
+input[type="text"][class="advanced"]:focus {
+    border-style: solid;
+    border-color: #2678e3;
+    border-width: 2px;
+    outline: none;
+}
+
+input[type="submit"][class="advanced"] {
+    display: block;
+    background-color: #4888ef;
+    color: white;
+    margin: auto;
+    padding-inline: 15px;
+    padding-block: 8px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #4888ef;
+    border-width: 2px;
+    text-align: center;
+}
+
+input[type="submit"][class="advanced"]:hover {
+    border-color: #8ca9ff;
+    background: linear-gradient(to top, #377be8, #4d90fe);
+}

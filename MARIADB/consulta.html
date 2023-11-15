@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Consulta de Cine</title>
+        <link rel="stylesheet" href="./estilo.css" />
+    </head>
+    <body>
+        <div style="padding-block: 5px"></div>
+        <div class="minititle">Google</div>
+        <div style="padding-block: 5px"></div>
+        <div class="content">
+            <h1>Consulta de Cine</h1>
+            <hr />
+            <h2>Mostrar actor por...</h2>
+            <form action="./cgi-bin/actors.pl" accept-charset="ISO-8859-1" method="get">
+                <h3>id:</h3>
+                <input type="text" name="id" />
+                <br />
+                <div style="padding-block: 25px"></div>
+                <input type="submit" value="Buscar" />
+            </form>
+            <h2>Mostrar pelicula por...</h2>
+            <form action="./cgi-bin/movies.pl" accept-charset="ISO-8859-1" method="get">
+                <h3>año:</h3>
+                <input type="text" name="year" />
+                <br />
+                <h3>puntaje mayor a:</h3>
+                <input type="text" name="score" />
+                <br />
+                <h3>votos mayores a:</h3>
+                <input type="text" name="votes" />
+                <br />
+                <div style="padding-block: 25px"></div>
+                <input type="submit" value="Buscar" />
+            </form>
+        </div>
+    </body>
+</html>

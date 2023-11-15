@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ingreso de Usuarios</title>
+        <link rel="stylesheet" href="./estilo.css" />
+        <script src="./scripts/utilidades.js"></script>
+        <script src="./scripts/ingreso_usuario.js"></script>
+    </head>
+    <body>
+        <div id="content" class="content">
+            <img src="./logo.png" onclick="redirect('./usuarios.html')" class="logo" />
+            <div style="margin-block: 50px"></div>
+            <h1>Ingreso de Usuarios</h1>
+            <div style="margin-block: 50px"></div>
+            <input type="text" id="user" placeholder="Usuario" />
+            <div style="margin-block: 50px"></div>
+            <input type="password" id="password" placeholder="Contraseña" />
+            <div style="margin-block: 50px"></div>
+            <input type="button" class="login" onclick="access()" value="Ingresar" />
+            <div style="margin-block: 25px"></div>
+        </div>
+    </body>
+</html>
