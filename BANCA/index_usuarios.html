@@ -3,13 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <title>Usuario</title>
-        <link rel="stylesheet" href="./estilo.css" />
-        <script src="./scripts/usuarios.js"></script>
+        <link rel="stylesheet" href="./css/estilos_generales.css" />
+        <link rel="stylesheet" href="./css/menus_usuarios.css" />
+        <script src="./scripts/menus_usuarios.js"></script>
     </head>
     <body>
         <div id="content" class="content">
-            <h4 id="timer">Su sesión concluirá en:</h4>
-            <input type="button" class="close_session" onclick="close_session()" value="Cerrar sesión" />
+            <div class="top">
+                <div id="welcome"></div>
+                <h4 id="timer">Su sesión concluirá en:</h4>
+                <input type="button" class="logout" onclick="closeSession()" value="Cerrar sesión" />
+            </div>
+            <div style="height: 5px"></div>
+            <h2>Acceso rápido</h2>
+            <div style="height: 50px"></div>
+            <a href="./clientes.html">Ingresar nuevo cliente</a>
+            <div style="height: 50px"></div>
+            <a href="./cuentas.html">Crear nueva cuenta</a>
+            <div style="height: 50px"></div>
+            <a href="./tarjetas.html">Crear nueva tarjeta</a>
+            <div style="height: 50px"></div>
         </div>
     </body>
 </html>

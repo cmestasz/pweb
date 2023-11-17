@@ -7,8 +7,8 @@ use DBI;
 use utf8;
 
 my $cgi = CGI->new;
-my $user = "user01";
-my $password = "959869678";
+my $user = "testuser";
+my $password = "JQ_fF0YYUO1aS8CJ";
 my $dsn = "dbi:mysql:database=pweb;host=127.0.0.1";
 my $dbh = DBI->connect($dsn, $user, $password);
 my $query = "SELECT * FROM ";

@@ -5,9 +5,9 @@ use warnings;
 use CGI;
 use CGI::Session;
 use CGI::Cookie;
-use DBI;
 
 my $cgi = CGI->new;
+$cgi->charset("UTF-8");
 my %cookies = CGI::Cookie->fetch();
 my $session_cookie = $cookies{"session_id"};
 
@@ -19,12 +19,7 @@ if ($action eq "check") {
         my $session = CGI::Session->load($session_id);
         my $user = $session->param("user");
         my $expire_time = $session->expires() - time;
-        my $logged_in;
-        if ($expire_time > 0) {
-            $logged_in = 1;
-        } else {
-            $logged_in = 0;
-        }
+        my $logged_in = ($expire_time > 0) || 0;
         print<<BLOCK;
         <response>
             <logged_in>$logged_in</logged_in>

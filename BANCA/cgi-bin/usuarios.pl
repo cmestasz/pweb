@@ -8,13 +8,15 @@ use CGI::Cookie;
 use DBI;
 
 my $cgi = CGI->new;
-my $u = "query";
+$cgi->charset("UTF-8");
+my $u = "user_query";
 my $p = "W0()3ROEpIL9A)Cs";
 my $dsn = "dbi:mysql:database=banca;host=127.0.0.1";
 my $dbh = DBI->connect($dsn, $u, $p);
 
 my $user = $cgi->param("user");
 my $password = $cgi->param("password");
+my $session_time = 600;
 
 my $sth = $dbh->prepare("SELECT * FROM usuarios WHERE usuario=? AND clave=?");
 $sth->execute($user, $password);
@@ -23,13 +25,13 @@ $sth->execute($user, $password);
 if ($sth->fetchrow_array) {
     my $session = CGI::Session->new();
     $session->param("user", $user);
-    $session->expire(time + 180);
+    $session->expire(time + $session_time);
     $session->flush();
 
     my $cookie = $cgi->cookie(-name => "session_id",
                             -value => $session->id(),
-                            -expires => time + 180,
-                            "-max-age" => time + 180);
+                            -expires => time + $session_time,
+                            "-max-age" => time + $session_time);
     $cookie->bake();
 
     print "correct";
