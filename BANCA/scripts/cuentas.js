@@ -1,4 +1,4 @@
-window.addEventListener("load", checkFromCards);
+addEventListener("load", checkFromCards);
 
 function checkFromCards() {
     const number = localStorage.getItem("number");

@@ -28,7 +28,7 @@ if ($sth->fetchrow_array) {
     $session->expire(time + $session_time);
     $session->flush();
 
-    my $cookie = $cgi->cookie(-name => "session_id",
+    my $cookie = $cgi->cookie(-name => "user_session_id",
                             -value => $session->id(),
                             -expires => time + $session_time,
                             "-max-age" => time + $session_time);

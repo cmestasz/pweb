@@ -9,7 +9,7 @@ use CGI::Cookie;
 my $cgi = CGI->new;
 $cgi->charset("UTF-8");
 my %cookies = CGI::Cookie->fetch();
-my $session_cookie = $cookies{"user_session_id"};
+my $session_cookie = $cookies{"client_session_id"};
 
 my $action = $cgi->param("action");
 if ($action eq "check") {
@@ -17,13 +17,13 @@ if ($action eq "check") {
     if ($session_cookie) {
         my $session_id = $session_cookie->value();
         my $session = CGI::Session->load($session_id);
-        my $user = $session->param("user");
+        my $name = $session->param("name");
         my $expire_time = $session->expires() - time;
         my $logged_in = ($expire_time > 0) || 0;
         print<<BLOCK;
         <response>
             <logged_in>$logged_in</logged_in>
-            <user>$user</user>
+            <name>$name</name>
             <expire_time>$expire_time</expire_time>
         </response>
 BLOCK

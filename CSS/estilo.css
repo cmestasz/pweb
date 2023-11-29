@@ -19,9 +19,7 @@ a[class="top"]:hover {
     text-decoration: underline;
 }
 
-@keyframes color-cycle {
-    
-}
+@keyframes color-cycle {}
 
 h1 {
     text-align: center;

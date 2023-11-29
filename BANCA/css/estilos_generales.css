@@ -26,6 +26,7 @@ h1 {
     font-size: 40px;
     color: #002a8d;
 }
+
 /* Subtitles */
 h2 {
     text-align: left;
@@ -46,6 +47,15 @@ h3 {
 
 /* Text */
 h4 {
+    text-align: center;
+    font-size: 15px;
+    color: #202e44;
+}
+
+/* Text - Inline */
+h5 {
+    flex: 1;
+    display: inline-block;
     text-align: center;
     font-size: 15px;
     color: #202e44;
