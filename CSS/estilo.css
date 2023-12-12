@@ -18,12 +18,12 @@ a {
     letter-spacing: 1px;
 }
 
-a[class="top"] {
-    padding-inline: 10px;
+a:hover {
+    text-decoration: underline;
 }
 
-a[class="top"]:hover {
-    text-decoration: underline;
+a[class="top"] {
+    padding-inline: 10px;
 }
 
 h1 {
@@ -48,10 +48,6 @@ h4 {
     letter-spacing: 1px;
 }
 
-a[class="content"]:hover {
-    text-decoration: underline;
-}
-
 img {
     display: block;
     margin: auto;
@@ -71,7 +67,7 @@ img {
 
 @keyframes fall {
     0% {
-        top: -1325px;
+        top: -201vh;
     }
 
     100% {
