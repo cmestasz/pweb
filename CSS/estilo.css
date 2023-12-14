@@ -5,6 +5,11 @@ body {
     color: #ECE3C2;
 }
 
+div {
+    margin: auto;
+    width: fit-content;
+}
+
 .links {
     width: 80%;
     display: flex;
@@ -55,22 +60,32 @@ img {
     box-shadow: 0 0 0 7px #E5DCB1;
 }
 
+.left {
+    position: relative;
+    left: -300px;
+}
+
+.right {
+    position: relative;
+    right: -300px
+}
+
 .foreground {
     position: fixed;
     box-shadow: none;
     pointer-events: none;
     animation-name: fall;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
 @keyframes fall {
     0% {
-        top: -201vh;
+        transform: translateY(-50%);
     }
 
     100% {
-        top: 0px
+        transform: translateY(0%);
     }
 }
