@@ -62,12 +62,12 @@ img {
 
 .left {
     position: relative;
-    left: -300px;
+    left: -200px;
 }
 
 .right {
     position: relative;
-    right: -300px
+    right: -200px
 }
 
 .foreground {
