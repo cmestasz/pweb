@@ -24,7 +24,7 @@ input[type="text"] {
     background-color: #202124;
     color: white;
     margin: auto;
-    width: 75%;
+    width: 1250px;
     padding-inline: 25px;
     padding-block: 15px;
     border-radius: 10px;
@@ -32,6 +32,7 @@ input[type="text"] {
     border-color: #5f6368;
     border-width: 1px;
     text-align: center;
+    font-size: 20px;
 }
 
 input[type="text"]:hover {
@@ -56,6 +57,7 @@ input[type="submit"] {
     cursor: pointer;
     font-size: 20px;
     text-align: center;
+    font-weight: lighter;
 }
 
 input[type="submit"]:hover {

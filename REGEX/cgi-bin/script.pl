@@ -1,4 +1,4 @@
-#!F:/Perl/perl/bin/perl.exe
+#!C:\Perl\perl\bin\perl.exe
 
 use strict;
 use warnings;
@@ -11,14 +11,14 @@ my $operation = $cgi->param("operation");
 sub evaluate {
     my $result = "(".$_[0].")";
     $result =~ s/\s//g;
-    while ($result =~ /\(([\d\.]+([\+\-\*\/\%][\d\.]+)+)\)/) {
+    while ($result =~ /\(([\d\.]+(?:[\+\-\*\/\%][\d\.]+)+)\)/) {
         my $subresult = subresult($1);
         if ($subresult =~ /^Error:/) {
             return $subresult;
         }
-        $result =~ s/\([\d\.]+([\+\-\*\/\%][\d\.]+)+\)/$subresult/;
+        $result =~ s/\([\d\.]+(?:[\+\-\*\/\%][\d\.]+)+\)/$subresult/;
     }
-    if ($result =~ /^\d+\.?\d+?$/) {
+    if ($result =~ /^\d*\.?\d*?$/) {
         return $result;
     }
     return "Error: Formato no valido";
