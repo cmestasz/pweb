@@ -1,4 +1,4 @@
-#!C:\Perl\perl\bin\perl.exe
+#!F:/Perl/perl/bin/perl.exe
 
 use strict;
 use warnings;
