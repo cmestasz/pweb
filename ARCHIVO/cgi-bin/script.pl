@@ -1,19 +1,19 @@
-#!F:/Perl/perl/bin/perl.exe
+#!C:\Perl\perl\bin\perl.exe
 
 use strict;
 use warnings;
 use CGI;
-use utf8;
 
 my $cgi = CGI->new;
 my $name = $cgi->param("name");
 my $period = $cgi->param("period");
 my $local = $cgi->param("local");
 my $program = $cgi->param("program");
+$cgi->charset("UTF-8");
 
 my $idx = 0;
 my @results;
-open(IN, "<./programas.csv");
+open(IN, "<./programas2.csv");
 my @lines = <IN>;
 for (my $i = 0; $i < @lines; $i++) {
     if ($lines[$i] =~ /(.*?)\|(.*?)\|(?:.*?\|){2}(.*?)\|(?:.*?\|){5}(.*?)\|(?:.*?\|){5}(.*?)\|(.*?)\|/) {
