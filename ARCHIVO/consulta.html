@@ -9,13 +9,13 @@
 
 <body>
     <div style="padding-block: 5px"></div>
-    <div class="minititle">Google</div>
+    <a class="minititle" href="consulta.html">Google</a>
     <div style="padding-block: 5px"></div>
     <div class="content">
         <h1>Consulta de Programas de Universidades Licenciadas</h1>
         <hr />
         <h2>Mostrar programas por...</h2>
-        <form action="./cgi-bin/script.pl" method="get">
+        <form action="./cgi-bin/script.pl" method="post">
             <h3>nombre de universidad:</h3>
             <input type="text" name="name" />
             <br />
@@ -28,7 +28,7 @@
             <h3>denominación del programa:</h3>
             <input type="text" name="program" />
             <br />
-            <div style="padding-block: 25px"></div>
+            <div style="padding-block: 20px"></div>
             <input type="submit" value="Buscar" />
         </form>
     </div>

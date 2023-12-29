@@ -1,4 +1,4 @@
-#!C:\Perl\perl\bin\perl.exe
+#!perl\bin\perl.exe
 
 use strict;
 use warnings;
@@ -35,7 +35,7 @@ print<<BLOCK;
     </head>
     <body>
         <div style="padding-block: 5px"></div>
-        <div class="minititle">Google</div>
+        <a class="minititle" href="../consulta.html">Google</a>
         <div style="padding-block: 5px"></div>
         <div class="content">
             <h1>Programas Encontrados</h1>
