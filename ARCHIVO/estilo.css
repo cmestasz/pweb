@@ -46,10 +46,24 @@ hr {
     border: 1px solid;
 }
 
-ul {
-    padding-left: 0px;
+table {
+    width: 1700px;
+    border: 1px solid;
+    color: white;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding-left: 5px;
+    vertical-align: top;
     font-size: 11px;
     color: white;
+    border: 1px solid;
+}
+
+th {
+    font-size: 15px;
 }
 
 input[type="text"] {
