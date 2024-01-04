@@ -1,10 +1,9 @@
-#!F:/Perl/perl/bin/perl.exe
+#!perl/bin/perl.exe
 
 use strict;
 use warnings;
 use CGI;
 use DBI;
-use utf8;
 
 my $cgi = CGI->new;
 my $user = "user01";
@@ -14,12 +13,13 @@ my $dbh = DBI->connect($dsn, $user, $password);
 my $query = "SELECT * FROM ";
 
 sub print_row {
-    print "<li>$_[0]";
-        for (my $i = 1; $i < @_; $i++) {
-            print " - ".$_[$i];
-        }
-    print "</li>\n";
+    print "<tr>\n";
+    foreach my $val (@_) {
+        print "<td>$val</td>\n";
+    }
+    print "</tr>\n"
 }
+
 my $year = $cgi->param("year");
 my $score = $cgi->param("score");
 my $votes = $cgi->param("votes");
@@ -42,6 +42,7 @@ if ($votes) {
 my $sth = $dbh->prepare($query);
 $sth->execute;
 
+$cgi->charset("UTF-8");
 print($cgi->header("text/html"));
 print<<BLOCK;
 <!DOCTYPE html>
@@ -51,9 +52,9 @@ print<<BLOCK;
         <link rel="stylesheet" href="../estilo.css" />
     </head>
     <body>
-        <div style="padding-block: 5px"></div>
-        <div class="minititle">Google</div>
-        <div style="padding-block: 5px"></div>
+        <div style="height: 15px;"></div>
+        <a class="minititle" href="../consulta.html">Google</a>
+        <div style="height: 15px;"></div>
         <div class="content">
 BLOCK
 my @first_row = $sth->fetchrow_array;
@@ -69,15 +70,22 @@ BLOCK
             <h1>Películas Encontradas</h1>
             <hr />
             <br />
-            <ul>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Año</th>
+                    <th>Puntaje</th>
+                    <th>Votos</th>
+                </tr>
 BLOCK
     print_row(@first_row);
     while (my @row = $sth->fetchrow_array) {
         print_row(@row);
     }
-    print "</ul>";
 }
 print<<BLOCK;
+            </table>
         </div>
     </body>
 </html>

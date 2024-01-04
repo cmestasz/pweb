@@ -8,22 +8,22 @@
 </head>
 
 <body>
-    <div style="padding-block: 5px"></div>
-    <div class="minititle">Google</div>
-    <div style="padding-block: 5px"></div>
+    <div style="height: 15px;"></div>
+    <a class="minititle" href="consulta.html">Google</a>
+    <div style="height: 15px;"></div>
     <div class="content">
         <h1>Consulta de Cine</h1>
         <hr />
         <h2>Mostrar actor por...</h2>
-        <form action="./cgi-bin/actors.pl" accept-charset="ISO-8859-1" method="get">
+        <form action="cgi-bin/actors.pl" method="post">
             <h3>id:</h3>
             <input type="text" name="id" />
             <br />
-            <div style="padding-block: 25px"></div>
+            <div style="height: 30px;"></div>
             <input type="submit" value="Buscar" />
         </form>
         <h2>Mostrar pelicula por...</h2>
-        <form action="./cgi-bin/movies.pl" accept-charset="ISO-8859-1" method="get">
+        <form action="cgi-bin/movies.pl" method="post">
             <h3>año:</h3>
             <input type="text" name="year" />
             <br />
@@ -33,7 +33,7 @@
             <h3>votos mayores a:</h3>
             <input type="text" name="votes" />
             <br />
-            <div style="padding-block: 25px"></div>
+            <div style="height: 30px;"></div>
             <input type="submit" value="Buscar" />
         </form>
     </div>

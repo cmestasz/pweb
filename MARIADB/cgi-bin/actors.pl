@@ -1,31 +1,31 @@
-#!F:/Perl/perl/bin/perl.exe
+#!perl/bin/perl.exe
 
 use strict;
 use warnings;
 use CGI;
 use DBI;
-use utf8;
 
 my $cgi = CGI->new;
-my $user = "testuser";
-my $password = "JQ_fF0YYUO1aS8CJ";
+my $user = "user01";
+my $password = "959869678";
 my $dsn = "dbi:mysql:database=pweb;host=127.0.0.1";
 my $dbh = DBI->connect($dsn, $user, $password);
 my $query = "SELECT * FROM ";
 
 sub print_row {
-    print "<h2>$_[0]";
-        for (my $i = 1; $i < @_; $i++) {
-            print " - ".$_[$i];
-        }
-    print "</h2>\n";
+    print "<tr>\n";
+    foreach my $val (@_) {
+        print "<td>$val</td>\n";
+    }
+    print "</tr>\n"
 }
 
 my $id = $cgi->param("id");
-$query = $query."actor WHERE ID=$id";
+$query = $query."actor WHERE ID=?";
 my $sth = $dbh->prepare($query);
-$sth->execute;
+$sth->execute($id);
 
+$cgi->charset("UTF-8");
 print($cgi->header("text/html"));
 print<<BLOCK;
 <!DOCTYPE html>
@@ -35,9 +35,9 @@ print<<BLOCK;
         <link rel="stylesheet" href="../estilo.css" />
     </head>
     <body>
-        <div style="padding-block: 5px"></div>
-        <div class="minititle">Google</div>
-        <div style="padding-block: 5px"></div>
+        <div style="height: 15px;"></div>
+        <a class="minititle" href="../consulta.html">Google</a>
+        <div style="height: 15px;"></div>
         <div class="content">
         
 BLOCK
@@ -54,6 +54,11 @@ BLOCK
             <h1>Actor Encontrado</h1>
             <hr />
             <br />
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                </tr>
 BLOCK
     print_row(@first_row);
     while (my @row = $sth->fetchrow_array) {
@@ -61,6 +66,7 @@ BLOCK
     }
 }
 print<<BLOCK;
+            </table>
         </div>
     </body>
 </html>

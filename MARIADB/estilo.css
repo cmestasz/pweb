@@ -8,6 +8,7 @@ body {
     font-size: 20px;
     color: white;
     padding-left: 25px;
+    text-decoration: none;
 }
 
 .content {
@@ -40,15 +41,34 @@ h3 {
 hr {
     position: absolute;
     left: 0px;
-    width: 100%;
+    width: 99.9%;
     color: #434343;
     border: 1px solid;
 }
 
-ul {
-    padding-left: 0px;
-    font-size: 18px;
+table {
+    margin: auto;
+    width: 1250px;
+    border: 1px solid;
     color: white;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    vertical-align: top;
+    font-size: 11px;
+    color: white;
+    border: 1px solid;
+}
+
+th {
+    font-size: 20px;
+}
+
+td {
+    font-size: 15px;
+    padding-left: 5px;
 }
 
 input[type="text"] {
@@ -57,7 +77,7 @@ input[type="text"] {
     border-style: solid;
     border-color: #858585;
     border-width: 1px;
-    width: 78%;
+    width: 1500px;
     padding-inline: 15px;
     padding-block: 10px;
 }
@@ -73,7 +93,6 @@ input[type="submit"] {
     display: block;
     background-color: #4888ef;
     color: white;
-    margin: auto;
     padding-inline: 15px;
     padding-block: 8px;
     border-radius: 5px;
