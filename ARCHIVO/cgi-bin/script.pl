@@ -3,7 +3,6 @@
 use strict;
 use warnings;
 use CGI;
-use Data::Dumper;
 
 my $cgi = CGI->new;
 my $name = $cgi->param("name");
@@ -20,7 +19,6 @@ for (my $i = 1; $i < @lines; $i++) {
     if ($lines[$i] =~ /(.+?)\|(.+?)\|(?:.+?\|){2}(.+?)\|(?:.+?\|){5}(.+?)\|(?:.+?\|){5}(.+?)\|(.+?)\|/) {
         if ((!$name || $name eq $2) && (!$period || $period eq $3) && (!$local || $local eq $4) && (!$program || $program eq $5)) {
             @results[$idx] = [$1, $2, $3." años", $4, $5, $6];
-            # $1.": ".$2.". Licenciada por ".$3." años. Departamento: ".$4.". Programa: ".$5." - ".$6.".";
             $idx++;
         }
     }
