@@ -4,10 +4,11 @@ use strict;
 use warnings;
 use CGI;
 use DBI;
+use Encode;
 
 my $cgi = CGI->new;
-my $user = "user01";
-my $password = "959869678";
+my $user = "user_01";
+my $password = "dGF2K4YjRHc7-R]9";
 my $dsn = "dbi:mysql:database=pweb;host=127.0.0.1";
 my $dbh = DBI->connect($dsn, $user, $password);
 my $query = "SELECT * FROM ";
@@ -15,7 +16,8 @@ my $query = "SELECT * FROM ";
 sub print_row {
     print "<tr>\n";
     foreach my $val (@_) {
-        print "<td>$val</td>\n";
+        my $eval = encode("UTF-8", $val);
+        print "<td>$eval</td>\n";
     }
     print "</tr>\n"
 }
