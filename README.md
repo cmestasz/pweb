@@ -44,7 +44,7 @@
 
 ### Perl
 * Se realizó la resolución de 5 ejercicios propuestos en Perl.
-* Se puede visualizar las resoluciones en: [Perl](/Perl)
+* Se puede visualizar las resoluciones en: [PERL](/PERL)
 
 ### CGI con Perl
 * Se desarrolló una página web que permite realizar búsquedas usando el motor de búsqueda de Google.
@@ -64,11 +64,11 @@
 ### MariaDB
 * Se desarrolló una página web que permite realizar búsquedas de autores y películas en una base de datos de MariaDB.
 * Para ejecutar la página web, se debe tener instalado un servidor web, ubicar los archivos estáticos en la carpeta htdocs y los scripts Perl en la carpeta cgi-bin.
-* Los archivos se encuentran en la carpeta [MariaDB](/MariaDB).
+* Los archivos se encuentran en la carpeta [MARIADB](/MARIADB).
 
 ### JavaScript
 * Se redactó un informe detallando un resumen de JavaScript, demostrando su uso para el desarrollo de aplicaciones web.
-* Se puede visualizar el informe en: [Informe](/JavaScript/JS.pdf)
+* Se puede visualizar el informe en: [INFORME](/JAVASCRIPT/JS.pdf)
 
 ### Proyecto Final
 * El proyecto final fue desarrollado en otro repositorio.
