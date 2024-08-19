@@ -17,7 +17,7 @@
             <td colspan="3"><span><b>Curso</b></span>: Programación Web 1</td>
         </tr>
         <tr>
-            <td colspan="3"><span><b>Fecha</b></span>: 2024/07/28</td>
+            <td colspan="3"><span><b>Fecha</b></span>: 05/02/2024</td>
         </tr>
     </tbody>
 </table>
